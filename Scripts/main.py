@@ -1,3 +1,8 @@
+'''Author Arkaaap Implementing Ciphers using python and hashing 
+DATE 3/19/2025 
+:)
+'''
+
 import bcrypt
 
 def banner ():
