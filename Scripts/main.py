@@ -59,6 +59,9 @@ def hash (passcode):
     else:
         print ("Nope NOT Buddy In yOur DrE@m$ ")
 
+def Reverse_Cipher (passcode):
+    for i in range (len(passcode)-1,-1,-1):
+        print (c[i],end = " ")
 
 
     
@@ -67,8 +70,10 @@ def hash (passcode):
 
 if __name__ == '__main__':
     banner ()
-    print("Press '1' For normal acesar ciphering your text message :\n")
+    print("Press '1' For normal  ciphering  text message :\n")
     print ("Press '2' for hashing the password :\n")
+    print ("3. Reversing Cipher \n")
+    print ("4. Exit ")
     n = int(input("Enter The Choice :"))
     c = str(input("Enter The String :"))
     match n:
@@ -76,6 +81,11 @@ if __name__ == '__main__':
             encode(c)
         case 2:
             hash (c)
+        case 3:
+            Reverse_Cipher(c)
+        case 4:
+            exit(0)
+        
 
 
     #decode(c)
