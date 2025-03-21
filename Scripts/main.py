@@ -63,6 +63,9 @@ def Reverse_Cipher (passcode):
     for i in range (len(passcode)-1,-1,-1):
         print (c[i],end = " ")
 
+def Reverse_Cipher1 (passcode):
+        for i in range (len(passcode)-1,-1,-1):
+            print (c[i]-1,end = " ")
 
     
 
@@ -72,8 +75,8 @@ if __name__ == '__main__':
     banner ()
     print("Press '1' For normal  ciphering  text message :\n")
     print ("Press '2' for hashing the password :\n")
-    print ("3. Reversing Cipher \n")
-    print ("4. Exit ")
+    print ("press 3-4. For Reversing Cipher And More : \n")
+    print ("5. Exit ")
     n = int(input("Enter The Choice :"))
     c = str(input("Enter The String :"))
     match n:
@@ -84,6 +87,8 @@ if __name__ == '__main__':
         case 3:
             Reverse_Cipher(c)
         case 4:
+            Reverse_Cipher1(c)
+        case 5:
             exit(0)
         
 
