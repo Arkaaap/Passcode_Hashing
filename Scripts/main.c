@@ -87,6 +87,8 @@ int main (void)
         reverse_Cipher(c);
         break;
         case 3:
+            printf ("Enter The String :");
+            scanf ("%s",c);
             reverse_Cipher1(c);
             break;
         case 4.
