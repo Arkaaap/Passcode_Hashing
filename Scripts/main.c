@@ -46,14 +46,26 @@ void reverse_Cipher (char *c)
     }
 }
 
+
+void reverse_Cipher1 (char *c)
+{
+    int l = strlen(c);
+    for (int i=(l-1);i>=0;i--)
+    {
+        printf ("%c",c[i]-1);
+    }
+
+}
+    
+
 int main (void)
 {
     int n;
     while (TRUE){
     Banner();
     printf ("1.CAESAR_Cipher  :\n");
-    printf ("2.reverse _Cipher :\n");
-    printf ("3. EXIT\n");
+    printf ("Press 2-3.reverse _Cipher  &  More :\n");
+    printf ("4. EXIT\n");
     printf ("Enter The Choice :\n");
     scanf ("%d",&n);
     char c[100];
@@ -75,7 +87,11 @@ int main (void)
         reverse_Cipher(c);
         break;
         case 3:
-            exit (0x00);
+            reverse_Cipher1(c);
+            break;
+        case 4.
+            exit (0);
+            break;
         default:
             fprintf (stdout,"Invalid Choice !!");
     }
