@@ -91,7 +91,7 @@ int main (void)
             scanf ("%s",c);
             reverse_Cipher1(c);
             break;
-        case 4.
+        case 4:
             exit (0);
             break;
         default:
