@@ -1,9 +1,5 @@
-'''Author Arkaaap Implementing Ciphers using python and hashing 
-DATE 3/19/2025 
-:)
-'''
-
 import bcrypt
+#from string import maketrans as mk 
 
 def banner ():
     
@@ -63,16 +59,37 @@ def Reverse_Cipher (passcode):
     for i in range (len(passcode)-1,-1,-1):
         print (c[i],end = " ")
 
+
     
+# def Rot13 (passcode):
+#     rot13Text = mk('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
+# 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm') # every letter corresponds by shifting 13 places like A->N (A+13) = N and so on ...
+#     return passcode.translate (rot13Text)
+
+def Rot13(passcode):
+    result = ""
+    for char in passcode:
+        if 'a' <= char <= 'z':  # Handle lowercase letters
+            result += chr(((ord(char) - ord('a') + 13) % 26) + ord('a'))
+        elif 'A' <= char <= 'Z':  # Handle uppercase letters
+            result += chr(((ord(char) - ord('A') + 13) % 26) + ord('A'))
+        else:
+            result += char  # Non-alphabetical characters remain unchanged
+    return result
+
+
+
+
 
 
 
 if __name__ == '__main__':
     banner ()
-    print("Press '1' For normal  ciphering  text message :\n")
-    print ("Press '2' for hashing the password :\n")
-    print ("Press 3. For Reversing Cipher : \n")
-    print ("Press 4. Exit \n")
+    print ("Press'1' For normal  ciphering  text message :\n")
+    print ("Press'2' for hashing the password :\n")
+    print ("Press'3' Reversing Cipher \n")
+    print ("Press'4' Rot_13 \n ")
+    print ("Press'5' Exit ")
     n = int(input("Enter The Choice :"))
     c = str(input("Enter The String :"))
     match n:
@@ -83,7 +100,9 @@ if __name__ == '__main__':
         case 3:
             Reverse_Cipher(c)
         case 4:
-            exit(0)
+            print (f"{Rot13(c)}")
+        case 5:
+            exit ()
         
 
 
