@@ -78,6 +78,18 @@ def Rot13(passcode):
     return result
 
 
+def Letter_Swap(s):
+    s1 = []
+    for item in s:
+        if item.isalpha():
+            if item.isupper():
+                s1.append(item.lower())
+            else:
+                s1.append(item.upper())
+        else:
+            s1.append(item)
+    return ''.join(s1[::-1])
+
 
 
 
@@ -89,7 +101,8 @@ if __name__ == '__main__':
     print ("Press'2' for hashing the password :\n")
     print ("Press'3' Reversing Cipher \n")
     print ("Press'4' Rot_13 \n ")
-    print ("Press'5' Exit ")
+    print ("Press'5' Letter_Swap:\n ")
+    print ("Press'6' exit :\n)
     n = int(input("Enter The Choice :"))
     c = str(input("Enter The String :"))
     match n:
@@ -102,7 +115,9 @@ if __name__ == '__main__':
         case 4:
             print (f"{Rot13(c)}")
         case 5:
-            exit ()
+            Letter_Swap(c)
+        case 6:
+            exit (0)
         
 
 
