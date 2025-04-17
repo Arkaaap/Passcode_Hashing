@@ -96,28 +96,29 @@ def Letter_Swap(s):
 
 
 if __name__ == '__main__':
-    banner ()
-    print ("Press'1' For normal  ciphering  text message :\n")
-    print ("Press'2' for hashing the password :\n")
-    print ("Press'3' Reversing Cipher \n")
-    print ("Press'4' Rot_13 \n ")
-    print ("Press'5' Letter_Swap:\n ")
-    print ("Press'6' exit :\n")
-    n = int(input("Enter The Choice :"))
-    c = str(input("Enter The String :"))
-    match n:
-        case 1:
-            encode(c)
-        case 2:
-            hash (c)
-        case 3:
-            Reverse_Cipher(c)
-        case 4:
-            print (f"{Rot13(c)}")
-        case 5:
-            Letter_Swap(c)
-        case 6:
-            exit (0)
+    while(True):
+        banner ()
+        print ("Press'1' For normal  ciphering  text message :\n")
+        print ("Press'2' for hashing the password :\n")
+        print ("Press'3' Reversing Cipher \n")
+        print ("Press'4' Rot_13 \n ")
+        print ("Press'5' Letter_Swap:\n ")
+        print ("Press'6' exit :\n")
+        n = int(input("Enter The Choice :"))
+        c = str(input("Enter The String :"))
+        match n:
+            case 1:
+                encode(c)
+            case 2:
+                hash (c)
+            case 3:
+                Reverse_Cipher(c)
+            case 4:
+                print (f"{Rot13(c)}")
+            case 5:
+                print (f"{Letter_Swap(c)}")
+            case 6:
+                exit (0)
         
 
 
