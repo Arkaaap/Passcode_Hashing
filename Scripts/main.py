@@ -118,6 +118,7 @@ if __name__ == '__main__':
             case 5:
                 print (f"{Letter_Swap(c)}")
             case 6:
+                print ("GraceFully Exiting...")
                 exit (0)
         
 
