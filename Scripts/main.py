@@ -91,7 +91,16 @@ def Letter_Swap(s):
     return ''.join(s1[::-1])
 
 
-
+def encrypt (text , r):
+    rail = [''] * r  
+    i,dir  = 0,1 
+    for ch in text :
+        rail += ch 
+        i+=dir 
+        if (i==0 or i==r-1):
+            dir *=-1 
+    
+    return ''.join(rail)
 
 
 
@@ -103,7 +112,8 @@ if __name__ == '__main__':
         print ("Press'3' Reversing Cipher \n")
         print ("Press'4' Rot_13 \n ")
         print ("Press'5' Letter_Swap:\n ")
-        print ("Press'6' exit :\n")
+        print ("Press '6' Rail_Fence\n")
+        print ("Press'-1' exit :\n")
         n = int(input("Enter The Choice :"))
         c = str(input("Enter The String :"))
         match n:
